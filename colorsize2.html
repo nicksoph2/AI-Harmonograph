@@ -1,0 +1,528 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Advanced Property Looping Interface</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <button
+      id="toggleControlsBtn"
+      class="toggle-controls-btn"
+      onclick="showControls()"
+    >
+      Show Controls
+    </button>
+
+    <div class="controls" id="controlsPanel">
+      <div
+        style="
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          margin-bottom: 10px;
+        "
+      >
+        <span style="font-weight: bold; font-size: 14px"
+          >Harmonograph Controls</span
+        ><button onclick="generate()">Make</button>
+        <button
+          onclick="hideControls()"
+          style="background: #ff4d4d; padding: 4px 8px; font-size: 11px"
+        >
+          Hide
+        </button>
+      </div>
+      <div>
+        <input
+          type="file"
+          id="fileInput"
+          accept=".json"
+          style="display: none"
+          onchange="handleFileLoad(event)"
+        />
+      </div>
+      <fieldset class="collapsible time-controls">
+        <legend>Time & Render</legend>
+        <div class="fieldset-content">
+          <div class="main-control-group">
+            <label for="pointCount">Points:</label>
+            <input
+              type="number"
+              id="pointCount"
+              value="1000"
+              min="10"
+              step="10"
+            />
+          </div>
+          <div class="main-control-group">
+            <label for="renderMode">Render:</label>
+            <select id="renderMode" onchange="toggleRenderMode()">
+              <option value="line">Line</option>
+              <option value="object">Objects</option>
+            </select>
+          </div>
+          <div class="main-control-group">
+            <label for="timeStart">Start:</label>
+            <input type="number" id="timeStart" value="0" step="0.01" min="0" />
+          </div>
+          <div class="main-control-group">
+            <label for="timeEnd">End:</label>
+            <input
+              type="number"
+              id="timeEnd"
+              value="10"
+              step="0.01"
+              min="0.01"
+            />
+          </div>
+          <div
+            style="
+              display: flex;
+              gap: 8px;
+              margin-top: 10px;
+              grid-column: 1 / -1;
+            "
+          >
+            <button
+              onclick="saveSettings()"
+              style="padding: 3px 14px; font-size: 12px"
+            >
+              Save Settings
+            </button>
+            <button
+              onclick="loadSettings()"
+              style="padding: 3px 14px; font-size: 12px"
+            >
+              Load Settings
+            </button>
+            <button
+              onclick="exportSVG()"
+              style="
+                padding: 3px 14px;
+                font-size: 12px;
+                background: #f5a623;
+                color: #222;
+              "
+            >
+              Export SVG
+            </button>
+            <button
+              onclick="resetPanZoom()"
+              style="
+                padding: 3px 14px;
+                font-size: 12px;
+                background: #ff6b6b;
+                color: white;
+              "
+              title="Reset pan and zoom to default view"
+            >
+              Reset View
+            </button>
+          </div>
+          <div
+            style="
+              display: flex;
+              justify-content: space-between;
+              align-items: center;
+              margin-top: 5px;
+              font-size: 11px;
+              color: #666;
+            "
+          >
+            <span id="zoomStatus">Zoom: 100%</span>
+            <span id="panStatus">Pan: 0, 0</span>
+          </div>
+        </div>
+      </fieldset>
+
+      <fieldset class="collapsible">
+        <legend>Pendulums</legend>
+        <div class="fieldset-content">
+          <button class="add-btn" onclick="addPendulum()">Add Pendulum</button>
+          <div id="pendulum-list" class="pendulum-list">
+            <table
+              class="pendulum-table"
+              id="pendulum-table"
+              style="display: none"
+            >
+              <thead>
+                <tr>
+                  <th>Name</th>
+                  <th>Freq<br />(Hz)</th>
+                  <th>Mag</th>
+                  <th>Phase<br />(°)</th>
+                  <th>Damp</th>
+                  <th>X</th>
+                  <th>Y</th>
+                  <th></th>
+                </tr>
+              </thead>
+              <tbody id="pendulum-tbody"></tbody>
+            </table>
+          </div>
+        </div>
+      </fieldset>
+
+      <fieldset class="collapsible">
+        <legend>Color</legend>
+        <div class="fieldset-content">
+          <!-- Selected Palette Colors (first) -->
+          <div class="palette-loader-controls">
+            <span style="font-weight: 600; font-size: 12px"
+              >Selected Palette:</span
+            >
+          </div>
+          <div id="paletteColorBlocks" style="margin-bottom: 15px"></div>
+
+          <!-- Background Color Picker (second) -->
+          <div class="palette-loader-controls">
+            <label for="backgroundColorPicker">Background Color:</label>
+            <input
+              type="color"
+              id="backgroundColorPicker"
+              value="#ffffff"
+              style="width: 50px; height: 30px"
+            />
+          </div>
+
+          <!-- Palette Selection and Apply (third) -->
+          <div class="palette-loader-controls">
+            <select
+              id="paletteSelect"
+              style="display: inline-block; width: auto; margin-right: 8px"
+            ></select>
+            <button id="applyPaletteBtn" style="display: inline-block">
+              Apply Palette
+            </button>
+          </div>
+
+          <!-- Load Palette File (fourth/last) -->
+          <div class="palette-loader-controls">
+            <input
+              type="file"
+              id="paletteFileInput"
+              accept=".json"
+              style="display: inline-block; width: auto"
+            />
+            <div id="palettePreview">
+              <!-- Empty preview div - not currently used -->
+            </div>
+          </div>
+
+          <div class="prop-control-group">
+            <div class="input-pair">
+              <label>Loops:</label>
+              <input
+                type="number"
+                class="prop-frequency"
+                value="1"
+                step="1"
+                min="1"
+              />
+            </div>
+            <div class="input-pair">
+              <label>Offset %:</label>
+              <input
+                type="number"
+                class="prop-offset"
+                value="0"
+                min="0"
+                max="100"
+                step="1"
+              />
+            </div>
+            <div class="input-pair">
+              <label>Loop Length:</label>
+              <span class="prop-loop-length-display">No Loop</span>
+            </div>
+          </div>
+          <button class="add-btn" onclick="addControlPoint('color', '#ff0000')">
+            Add Color Point
+          </button>
+          <div class="control-point-header">
+            <span>Loop %</span>
+            <span>Color</span>
+          </div>
+          <div id="color-points" class="control-point-list"></div>
+        </div>
+      </fieldset>
+
+      <fieldset class="collapsible">
+        <legend>Line Width</legend>
+        <div class="fieldset-content">
+          <div class="prop-control-group">
+            <div class="input-pair">
+              <label>Loops:</label>
+              <input
+                type="number"
+                class="prop-frequency"
+                value="1"
+                step="0.01"
+                min="1"
+              />
+            </div>
+            <div class="input-pair">
+              <label>Offset %:</label>
+              <input
+                type="number"
+                class="prop-offset"
+                value="10"
+                min="0"
+                max="100"
+                step="1"
+              />
+            </div>
+            <div class="input-pair">
+              <label>Loop Length:</label>
+              <span class="prop-loop-length-display">No Loop</span>
+            </div>
+          </div>
+          <button class="add-btn" onclick="addControlPoint('lineWidth', 1)">
+            Add Line Width Point
+          </button>
+          <div class="control-point-header">
+            <span>Loop %</span>
+            <span>Width</span>
+          </div>
+          <div id="lineWidth-points" class="control-point-list"></div>
+        </div>
+      </fieldset>
+
+      <fieldset class="collapsible">
+        <legend>Object Width</legend>
+        <div class="fieldset-content">
+          <div class="prop-control-group">
+            <div class="input-pair">
+              <label>Loops:</label>
+              <input
+                type="number"
+                class="prop-frequency"
+                value="1"
+                step="0.01"
+                min="1"
+              />
+            </div>
+            <div class="input-pair">
+              <label>Offset %:</label>
+              <input
+                type="number"
+                class="prop-offset"
+                value="10"
+                min="0"
+                max="100"
+                step="1"
+              />
+            </div>
+            <div class="input-pair">
+              <label>Loop Length:</label>
+              <span class="prop-loop-length-display">No Loop</span>
+            </div>
+          </div>
+          <button class="add-btn" onclick="addControlPoint('objectWidth', 5)">
+            Add Object Width Point
+          </button>
+          <div class="control-point-header">
+            <span>Loop %</span>
+            <span>Width</span>
+          </div>
+          <div id="objectWidth-points" class="control-point-list"></div>
+        </div>
+      </fieldset>
+
+      <fieldset class="collapsible">
+        <legend>Height</legend>
+        <div class="fieldset-content">
+          <div class="prop-control-group">
+            <div class="input-pair">
+              <label>Loops:</label>
+              <input
+                type="number"
+                class="prop-frequency"
+                value="1"
+                step="1"
+                min="1"
+              />
+            </div>
+            <div class="input-pair">
+              <label>Offset %:</label>
+              <input
+                type="number"
+                class="prop-offset"
+                value="0"
+                min="0"
+                max="100"
+                step="1"
+              />
+            </div>
+            <div class="input-pair">
+              <label>Loop Length:</label>
+              <span class="prop-loop-length-display">No Loop</span>
+            </div>
+          </div>
+          <button class="add-btn" onclick="addControlPoint('height', 50)">
+            Add Height Point
+          </button>
+          <div class="control-point-header">
+            <span>Loop %</span>
+            <span>Height</span>
+          </div>
+          <div id="height-points" class="control-point-list"></div>
+        </div>
+      </fieldset>
+
+      <fieldset class="collapsible">
+        <legend>Transparency</legend>
+        <div class="fieldset-content">
+          <div class="prop-control-group">
+            <div class="input-pair">
+              <label>Loops:</label>
+              <input
+                type="number"
+                class="prop-frequency"
+                value="1"
+                step="1"
+                min="1"
+              />
+            </div>
+            <div class="input-pair">
+              <label>Offset %:</label>
+              <input
+                type="number"
+                class="prop-offset"
+                value="0"
+                min="0"
+                max="100"
+                step="1"
+              />
+            </div>
+            <div class="input-pair">
+              <label>Loop Length:</label>
+              <span class="prop-loop-length-display">No Loop</span>
+            </div>
+          </div>
+          <button class="add-btn" onclick="addControlPoint('opacity', 0)">
+            Add Transparency Point
+          </button>
+          <div class="control-point-header">
+            <span>Loop %</span>
+            <span>Transparency %</span>
+          </div>
+          <div id="opacity-points" class="control-point-list"></div>
+        </div>
+      </fieldset>
+
+      <fieldset class="collapsible">
+        <legend>Rotation</legend>
+        <div class="fieldset-content">
+          <div class="main-control-group">
+            <label for="rotationEnabled">Enable Rotation:</label>
+            <input type="checkbox" id="rotationEnabled" onchange="generate()" />
+          </div>
+          <div class="main-control-group">
+            <label for="rotationCenterX">Center X:</label>
+            <input
+              type="number"
+              id="rotationCenterX"
+              value="0"
+              step="10"
+              onchange="generate()"
+            />
+          </div>
+          <div class="main-control-group">
+            <label for="rotationCenterY">Center Y:</label>
+            <input
+              type="number"
+              id="rotationCenterY"
+              value="0"
+              step="10"
+              onchange="generate()"
+            />
+          </div>
+          <div class="main-control-group">
+            <label for="rotationSpeed">Speed (°/point):</label>
+            <input
+              type="number"
+              id="rotationSpeed"
+              value="0.1"
+              step="0.01"
+              min="0"
+              max="10"
+              onchange="generate()"
+            />
+          </div>
+          <div class="main-control-group">
+            <label for="rotationDirection">Direction:</label>
+            <select id="rotationDirection" onchange="generate()">
+              <option value="1">Clockwise</option>
+              <option value="-1">Counter-clockwise</option>
+            </select>
+          </div>
+        </div>
+      </fieldset>
+
+      <fieldset class="collapsible">
+        <legend>Transform</legend>
+        <div class="fieldset-content">
+          <div class="main-control-group">
+            <label for="stretchX">Stretch X:</label>
+            <input
+              type="number"
+              id="stretchX"
+              value="1"
+              step="0.1"
+              min="0.1"
+              max="5"
+              onchange="generate()"
+            />
+          </div>
+          <div class="main-control-group">
+            <label for="stretchY">Stretch Y:</label>
+            <input
+              type="number"
+              id="stretchY"
+              value="1"
+              step="0.1"
+              min="0.1"
+              max="5"
+              onchange="generate()"
+            />
+          </div>
+          <div class="main-control-group">
+            <label for="imageRotation">Image Rotation (°):</label>
+            <input
+              type="number"
+              id="imageRotation"
+              value="0"
+              step="1"
+              min="-360"
+              max="360"
+              onchange="generate()"
+            />
+          </div>
+          <div style="display: flex; gap: 8px; margin-top: 10px">
+            <button
+              onclick="resetTransform()"
+              style="
+                padding: 3px 14px;
+                font-size: 12px;
+                background: #4a90e2;
+                color: white;
+              "
+              title="Reset all transform values to default"
+            >
+              Reset Transform
+            </button>
+          </div>
+        </div>
+      </fieldset>
+    </div>
+
+    <div id="visualizer" class="visualizer"></div>
+
+    <!-- Panzoom library for SVG pan and zoom functionality -->
+    <script src="https://unpkg.com/panzoom@9.4.0/dist/panzoom.min.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>

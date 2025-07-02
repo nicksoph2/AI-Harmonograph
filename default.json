@@ -1,0 +1,122 @@
+{
+  "version": "1.0",
+  "timestamp": "2025-06-29T14:00:43.970Z",
+  "mainControls": {
+    "pointCount": "3000",
+    "renderMode": "line",
+    "timeStart": "0",
+    "timeEnd": "10",
+    "backgroundColor": "#cccccc",
+    "rotation": {
+      "enabled": false,
+      "centerX": "0",
+      "centerY": "0",
+      "speed": "0.1",
+      "direction": "1"
+    }
+  },
+  "pendulums": [
+    {
+      "frequency": "3",
+      "magnitude": "100",
+      "phase": "0",
+      "dampening": "0.12",
+      "xAxis": false,
+      "yAxis": true
+    },
+    {
+      "frequency": "4",
+      "magnitude": "100",
+      "phase": "0",
+      "dampening": "0.12",
+      "xAxis": true,
+      "yAxis": false
+    },
+    {
+      "frequency": "4",
+      "magnitude": "100",
+      "phase": "0",
+      "dampening": "0.14",
+      "xAxis": false,
+      "yAxis": true
+    },
+    {
+      "frequency": "2",
+      "magnitude": "100",
+      "phase": "0",
+      "dampening": "0.15",
+      "xAxis": true,
+      "yAxis": true
+    }
+  ],
+  "properties": {
+    "color": {
+      "frequency": "10",
+      "offset": "25",
+      "controlPoints": [
+        {
+          "percentage": "16",
+          "value": "#db6b9c"
+        },
+        {
+          "percentage": "21",
+          "value": "#916bd6"
+        },
+        {
+          "percentage": "50",
+          "value": "#6657d6"
+        },
+        {
+          "percentage": "60",
+          "value": "#00fffb"
+        }
+      ]
+    },
+    "lineWidth": {
+      "frequency": "10",
+      "offset": "10",
+      "controlPoints": [
+        {
+          "percentage": "0",
+          "value": "1"
+        },
+        {
+          "percentage": "25",
+          "value": "5"
+        },
+        {
+          "percentage": "50",
+          "value": "2"
+        }
+      ]
+    },
+    "objectWidth": {
+      "frequency": "1",
+      "offset": "10",
+      "controlPoints": []
+    },
+    "height": {
+      "frequency": "1",
+      "offset": "0",
+      "controlPoints": []
+    },
+    "opacity": {
+      "frequency": "10",
+      "offset": "0",
+      "controlPoints": [
+        {
+          "percentage": "0",
+          "value": "0"
+        },
+        {
+          "percentage": "60",
+          "value": "50"
+        },
+        {
+          "percentage": "75",
+          "value": "75"
+        }
+      ]
+    }
+  }
+}

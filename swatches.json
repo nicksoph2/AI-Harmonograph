@@ -1,0 +1,1501 @@
+{
+  "Swatches": [
+    {
+      "name": "Swatch 1",
+      "colors": ["#D8C49C", "#C1AE89", "#B6AB96", "#B1A284", "#B5975B"]
+    },
+    {
+      "name": "Swatch 2",
+      "colors": ["#F6F9BB", "#FDDCA3", "#FDBE80", "#F8985F", "#F65B4B"]
+    },
+    {
+      "name": "Swatch 3",
+      "colors": ["#AC3030", "#931515", "#740B00", "#5A0404", "#440303"]
+    },
+    {
+      "name": "Swatch 4",
+      "colors": ["#8A9B0F", "#F8CA00", "#E97F02", "#BD1550", "#490A3D"]
+    },
+    {
+      "name": "Swatch 5",
+      "colors": ["#EFA9A1", "#E4756E", "#F47339", "#EC5633", "#FBC2A4"]
+    },
+    {
+      "name": "Swatch 6",
+      "colors": ["#1A265C", "#25221F", "#F9FAFF", "#CF8625"]
+    },
+    {
+      "name": "Swatch 7",
+      "colors": ["#F3FFA5", "#3B9650", "#D87B74", "#60502C", "#2C0C00"]
+    },
+    {
+      "name": "Swatch 8",
+      "colors": ["#21A542", "#004320", "#003D00", "#98E37E", "#208357"]
+    },
+    {
+      "name": "Swatch 9",
+      "colors": ["#F7FFEB", "#81E2C3", "#4E9779", "#214D34", "#06331C"]
+    },
+    {
+      "name": "Swatch 10",
+      "colors": ["#2C0429", "#69002F", "#F10550", "#CF70B0"]
+    },
+    {
+      "name": "Swatch 11",
+      "colors": ["#382E2F", "#AC0513", "#E2DDCB", "#EE5151", "#EEA8A8"]
+    },
+    {
+      "name": "Swatch 12",
+      "colors": ["#6D2642", "#8BA068", "#ABC77A", "#BD8FA2"]
+    },
+    {
+      "name": "Swatch 13",
+      "colors": ["#584634", "#786048", "#907860", "#BDD8D8", "#D8F0F0"]
+    },
+    {
+      "name": "Swatch 14",
+      "colors": ["#EFF3CD", "#B2D5BA", "#61ADA0", "#248F8D", "#605063"]
+    },
+    {
+      "name": "Swatch 15",
+      "colors": ["#83FF66", "#B5FF66", "#D9FF66", "#F6FF66", "#FFDD66"]
+    },
+    {
+      "name": "Swatch 16",
+      "colors": ["#FFEFD3", "#FFFEE4", "#D0ECEA", "#9FD6D2", "#8B7A5E"]
+    },
+    {
+      "name": "Swatch 17",
+      "colors": ["#FF929D", "#B5E6DD", "#FFB89F", "#F1ECCA", "#FFEED9"]
+    },
+    {
+      "name": "Swatch 18",
+      "colors": ["#F9E5B8", "#C9311A", "#5E80CD", "#CC7F37"]
+    },
+    {
+      "name": "Swatch 19",
+      "colors": ["#364356", "#816E81", "#E3B0B9", "#F8C0A7", "#FFFED7"]
+    },
+    {
+      "name": "Swatch 20",
+      "colors": ["#FFF4C7", "#EECC9E", "#F3957C", "#B66961", "#60474D"]
+    },
+    {
+      "name": "Swatch 21",
+      "colors": ["#3D2827", "#AB3738", "#E25230", "#EC8A4B", "#EEC14E"]
+    },
+    {
+      "name": "Swatch 22",
+      "colors": ["#0E76CF", "#14ABB8", "#21CBB9", "#2DD68F", "#2D926B"]
+    },
+    {
+      "name": "Swatch 23",
+      "colors": ["#432E6E", "#D1143E", "#FC6B4E", "#F5CA63", "#18A381"]
+    },
+    {
+      "name": "Swatch 24",
+      "colors": [
+        "#07313D",
+        "#2A7A79",
+        "#FD2A2A",
+        "#859600",
+        "#F0DA18",
+        "#DDCDC7"
+      ]
+    },
+    {
+      "name": "Swatch 25",
+      "colors": ["#86E0C7", "#CFEE62", "#F7C347", "#FD9F71"]
+    },
+    {
+      "name": "Swatch 26",
+      "colors": ["#172A39", "#570D00", "#6591F2", "#6B7BBB", "#ACACAC"]
+    },
+    {
+      "name": "Swatch 27",
+      "colors": ["#93DFB8", "#FFC8BA", "#E3AAD6", "#B5D8EB", "#FFBDD8"]
+    },
+    {
+      "name": "Swatch 28",
+      "colors": ["#413E4A", "#73626E", "#B38184", "#F0B49E", "#F7E4BE"]
+    },
+    {
+      "name": "Swatch 29",
+      "colors": ["#B35D03", "#D4C599", "#70A8A3", "#39352A", "#B68315"]
+    },
+    {
+      "name": "Swatch 30",
+      "colors": ["#E7A338", "#FEB42F", "#726322", "#4F4218", "#CBA197"]
+    },
+    {
+      "name": "Swatch 31",
+      "colors": ["#F66246", "#F19661", "#977D58", "#F3B086", "#EC5750"]
+    },
+    {
+      "name": "Swatch 32",
+      "colors": ["#FFD145", "#EEA9A4", "#262323", "#51576E", "#8C9CBB"]
+    },
+    {
+      "name": "Swatch 33",
+      "colors": ["#451E44", "#2F1238", "#273C47", "#7F8C74", "#C9BA73"]
+    },
+    {
+      "name": "Swatch 34",
+      "colors": ["#BDF0F3", "#65A9E6", "#876FA3", "#3838E8", "#6352A0"]
+    },
+    {
+      "name": "Swatch 35",
+      "colors": ["#C9E2DC", "#89E0F4", "#50BEF3", "#014A99", "#000200"]
+    },
+    {
+      "name": "Swatch 36",
+      "colors": ["#A3A948", "#EDB92E", "#F85931", "#CE1836", "#009989"]
+    },
+    {
+      "name": "Swatch 37",
+      "colors": ["#FF5C21", "#004848", "#FFBFBF", "#426363"]
+    },
+    {
+      "name": "Swatch 38",
+      "colors": ["#0FE7D6", "#C09060", "#F0E8D5", "#FD8402"]
+    },
+    {
+      "name": "Swatch 39",
+      "colors": ["#011B28", "#536E77", "#69B0E4", "#BA3955", "#D1B43F"]
+    },
+    {
+      "name": "Swatch 40",
+      "colors": ["#F8F4D7", "#F4DEC2", "#F4B36C", "#E98A77", "#F2B4A8"]
+    },
+    {
+      "name": "Swatch 41",
+      "colors": ["#D1F2A5", "#EFFAB4", "#FFC48C", "#FF9F80", "#F56991"]
+    },
+    {
+      "name": "Swatch 42",
+      "colors": ["#FFB884", "#F5DF98", "#FFF8D4", "#C0D1C2", "#2E4347"]
+    },
+    {
+      "name": "Swatch 43",
+      "colors": ["#C7A67C", "#F8ECC9", "#F1BBBA", "#EB9F9F", "#6B5344"]
+    },
+    {
+      "name": "Swatch 44",
+      "colors": ["#2C2E20", "#A58E6F", "#FFC198", "#FFA624", "#D7615D"]
+    },
+    {
+      "name": "Swatch 45",
+      "colors": ["#FFF8E5", "#CA7560", "#F7C7B0", "#C2D2B7", "#93AA8D"]
+    },
+    {
+      "name": "Swatch 46",
+      "colors": ["#C8B0DA", "#EAC0D8", "#CFE0E9", "#D1147E", "#B03089"]
+    },
+    {
+      "name": "Swatch 47",
+      "colors": ["#EE8888", "#EEEEDD", "#EEFFDD", "#EEDDCC", "#AAAA88"]
+    },
+    {
+      "name": "Swatch 48",
+      "colors": ["#BAFFFF", "#00CCFC", "#0877D1", "#4F00C4", "#0F0408"]
+    },
+    {
+      "name": "Swatch 49",
+      "colors": ["#BF0C43", "#F9BA15", "#8EAC00", "#127A97", "#452B72"]
+    },
+    {
+      "name": "Swatch 50",
+      "colors": ["#8CBFBF", "#A8ABAB", "#C49797", "#DA8282", "#F06D6D"]
+    },
+    {
+      "name": "Swatch 51",
+      "colors": ["#FF636B", "#FF6392", "#FF63B9", "#FF8363", "#FFA963"]
+    },
+    {
+      "name": "Swatch 52",
+      "colors": ["#2B2A28", "#3B3A38", "#91453F", "#CCB274", "#DB9C5C"]
+    },
+    {
+      "name": "Swatch 53",
+      "colors": ["#E6EBA9", "#ABBB9F", "#6F8B94", "#706482", "#703D6F"]
+    },
+    {
+      "name": "Swatch 54",
+      "colors": ["#EEDA95", "#B7C27E", "#9A927B", "#8A6A6B", "#805566"]
+    },
+    {
+      "name": "Swatch 55",
+      "colors": ["#94654C", "#F89FA1", "#FABDBD", "#FAD6D6", "#FEFCD0"]
+    },
+    {
+      "name": "Swatch 56",
+      "colors": ["#8E9E82", "#CACCB6", "#F2F0DF", "#A9C1D9", "#607890"]
+    },
+    {
+      "name": "Swatch 57",
+      "colors": ["#823C61", "#EE9962", "#D06763", "#821A69", "#CB2965"]
+    },
+    {
+      "name": "Swatch 58",
+      "colors": ["#FEF5F6", "#BFB391", "#B2B6BF", "#281E08", "#213C57"]
+    },
+    {
+      "name": "Swatch 59",
+      "colors": ["#4C94A5", "#77E8EE", "#91CDD0", "#90EBEF", "#00F3FF"]
+    },
+    {
+      "name": "Swatch 60",
+      "colors": ["#F3FDFE", "#92686A", "#EBE5D9", "#C18988", "#A04322"]
+    },
+    {
+      "name": "Swatch 61",
+      "colors": ["#0C4068", "#3593C9", "#56A9DD", "#037365", "#123378"]
+    },
+    {
+      "name": "Swatch 62",
+      "colors": ["#AAD6E5", "#FAE8CB", "#FAC9B9", "#C9A1C9", "#7B6884"]
+    },
+    {
+      "name": "Swatch 63",
+      "colors": [
+        "#784818",
+        "#333634",
+        "#60A8D8",
+        "#A8D8F0",
+        "#F0D8C0",
+        "#F0F0D8"
+      ]
+    },
+    {
+      "name": "Swatch 64",
+      "colors": ["#104A3D", "#8ADECC", "#FFE854", "#FFF2A1"]
+    },
+    {
+      "name": "Swatch 65",
+      "colors": ["#4D1D7A", "#7F50AB", "#B69DCE", "#F74B1B", "#F7A28B"]
+    },
+    {
+      "name": "Swatch 66",
+      "colors": ["#6DA67A", "#99A66D", "#A9BD68", "#B5CC6A", "#C0DE5D"]
+    },
+    {
+      "name": "Swatch 67",
+      "colors": ["#7B86E2", "#FBFCD0", "#D1E7F9", "#C4D0F5", "#7AA7D6"]
+    },
+    {
+      "name": "Swatch 68",
+      "colors": ["#F06D61", "#DA825F", "#C4975C", "#A8AB7B", "#8CBF99"]
+    },
+    {
+      "name": "Swatch 69",
+      "colors": ["#FFB884", "#F5DF98", "#FFF8D4", "#C0D1C2", "#2E4347"]
+    },
+    {
+      "name": "Swatch 70",
+      "colors": ["#72ADA9", "#8C8B90", "#331B3F", "#777C5E", "#206668"]
+    },
+    {
+      "name": "Swatch 71",
+      "colors": ["#0083C9", "#13B5E2", "#2097D4", "#6B9AD0", "#2577BC"]
+    },
+    {
+      "name": "Swatch 72",
+      "colors": ["#FFA416", "#FF6600", "#571400", "#0D0600", "#042100"]
+    },
+    {
+      "name": "Swatch 73",
+      "colors": ["#FFD590", "#DACB90", "#92BD8F", "#74A48E", "#6C8186"]
+    },
+    {
+      "name": "Swatch 74",
+      "colors": ["#70EAFF", "#57CCF7", "#2893E3", "#1E61B8", "#26172C"]
+    },
+    {
+      "name": "Swatch 75",
+      "colors": ["#B94500", "#CC0084", "#E8FFC6", "#FF6395", "#FFB60A"]
+    },
+    {
+      "name": "Swatch 76",
+      "colors": [
+        "#D5BAA5",
+        "#C1998C",
+        "#E0C9B3",
+        "#DDC471",
+        "#C0CEEA",
+        "#E8D7C9"
+      ]
+    },
+    {
+      "name": "Swatch 77",
+      "colors": ["#1F16B5", "#5F25C7", "#A425C7", "#C725A6", "#E84BC8"]
+    },
+    {
+      "name": "Swatch 78",
+      "colors": ["#5D5B5E", "#C73611", "#DFDF97", "#FA7923", "#FD9960"]
+    },
+    {
+      "name": "Swatch 79",
+      "colors": ["#BBBB88", "#CCC68D", "#EEDD99", "#EEC290", "#EEAA88"]
+    },
+    {
+      "name": "Swatch 80",
+      "colors": ["#B3CC57", "#ECF081", "#FFBE40", "#EF746F", "#AB3E5B"]
+    },
+    {
+      "name": "Swatch 81",
+      "colors": ["#F7F9FE", "#ECF1F2", "#DCE8EB", "#CBDBE0", "#BED2D9"]
+    },
+    {
+      "name": "Swatch 82",
+      "colors": ["#A8E6CE", "#DCEDC2", "#FFD3B5", "#FFAAA6", "#FF8C94"]
+    },
+    {
+      "name": "Swatch 83",
+      "colors": ["#D1CEC5", "#997C67", "#755330", "#B0703C", "#DBA72E"]
+    },
+    {
+      "name": "Swatch 84",
+      "colors": ["#F9EFB1", "#BAE9A3", "#8CEBB3", "#690601", "#4D3D24"]
+    },
+    {
+      "name": "Swatch 85",
+      "colors": ["#3A8019", "#62990F", "#B3A314", "#CC7E10", "#E66210"]
+    },
+    {
+      "name": "Swatch 86",
+      "colors": ["#3CC9FC", "#4FF0FF", "#56EAB9", "#AFFFCE", "#98F2D8"]
+    },
+    {
+      "name": "Swatch 87",
+      "colors": ["#0BF7EC", "#0C94EE", "#093EF3", "#3610F2", "#01070C"]
+    },
+    {
+      "name": "Swatch 88",
+      "colors": ["#A7E1A7", "#B2C0B5", "#BE9EC2", "#C97DD0", "#D45CDE"]
+    },
+    {
+      "name": "Swatch 89",
+      "colors": ["#6E99A6", "#A3E1BF", "#E7E5F7", "#ECD95C", "#FF6542"]
+    },
+    {
+      "name": "Swatch 90",
+      "colors": ["#30D1D3", "#F4CADA", "#FD5882", "#FFC9DA"]
+    },
+    {
+      "name": "Swatch 91",
+      "colors": ["#F4EBC3", "#F0E2A4", "#C5CEAE", "#BCA297", "#AB526B"]
+    },
+    {
+      "name": "Swatch 92",
+      "colors": ["#1D2E4C", "#1A5D65", "#3C8E77", "#9BC585", "#D2DB9A"]
+    },
+    {
+      "name": "Swatch 93",
+      "colors": ["#BED6C7", "#ADC0B4", "#8A7E66", "#A79B83", "#BBB2A1"]
+    },
+    {
+      "name": "Swatch 94",
+      "colors": ["#302624", "#86878B", "#C7865E", "#AEA770", "#C2C3BB"]
+    },
+    {
+      "name": "Swatch 95",
+      "colors": ["#450306", "#996969", "#020001", "#063F36", "#277D70"]
+    },
+    {
+      "name": "Swatch 96",
+      "colors": ["#FAE0A2", "#FFC9AD", "#FF8C8C", "#FF597A", "#FF2664"]
+    },
+    {
+      "name": "Swatch 97",
+      "colors": ["#555269", "#6F6C80", "#B6D1CC", "#DAEBC0", "#D99E84"]
+    },
+    {
+      "name": "Swatch 98",
+      "colors": ["#FCEA8C", "#D5D6D9", "#B1B1B0", "#F9E8E4", "#F9F9F9"]
+    },
+    {
+      "name": "Swatch 99",
+      "colors": ["#C9E2DC", "#89E0F4", "#50BEF3", "#014A99", "#000200"]
+    },
+    {
+      "name": "Swatch 100",
+      "colors": ["#A7A0A7", "#B7B8B4", "#BEC6B2", "#C9D8B8", "#D4EBBE"]
+    },
+    {
+      "name": "Swatch 101",
+      "colors": ["#6E99D3", "#A3E1B8", "#E7E58D", "#ECD945", "#FF65F5"]
+    },
+    {
+      "name": "Swatch 102",
+      "colors": ["#783D74", "#86B8B1", "#AD8798", "#CE9256", "#E9725A"]
+    },
+    {
+      "name": "Swatch 103",
+      "colors": ["#FFE181", "#EEE9E5", "#FAD3B2", "#FFBA7F", "#FF9C97"]
+    },
+    {
+      "name": "Swatch 104",
+      "colors": ["#EDEBE6", "#D6E1C7", "#94C7B6", "#403B33", "#D3643B"]
+    },
+    {
+      "name": "Swatch 105",
+      "colors": ["#A7D0E3", "#FDEFF8", "#D7BBE2", "#FBFEFF", "#FBFEFF"]
+    },
+    {
+      "name": "Swatch 106",
+      "colors": ["#584B42", "#4A332B", "#A15D5A", "#D19A95", "#E4D1CA"]
+    },
+    {
+      "name": "Swatch 107",
+      "colors": ["#42294C", "#5F5B6D", "#7C9B90", "#FCE34A", "#F4372A"]
+    },
+    {
+      "name": "Swatch 108",
+      "colors": ["#FFCFB7", "#FFA69D", "#DD312F", "#710026", "#BDAB87"]
+    },
+    {
+      "name": "Swatch 109",
+      "colors": ["#F4DC7C", "#BFC760", "#F199FF", "#EC9D7C", "#FD63A3"]
+    },
+    {
+      "name": "Swatch 110",
+      "colors": ["#FBF3DE", "#CEC0A3", "#877543", "#8B784E", "#8E733C"]
+    },
+    {
+      "name": "Swatch 111",
+      "colors": ["#B10F04", "#FFE5A2", "#F19411", "#B24B09", "#360F08"]
+    },
+    {
+      "name": "Swatch 112",
+      "colors": ["#B6F8BE", "#B6F8EE", "#D8F8B6", "#F8D6B6", "#F8E3B6"]
+    },
+    {
+      "name": "Swatch 113",
+      "colors": [
+        "#F67768",
+        "#464236",
+        "#CB2322",
+        "#CB2323",
+        "#464237",
+        "#CB2222"
+      ]
+    },
+    {
+      "name": "Swatch 114",
+      "colors": ["#873951", "#AD7B1A", "#B7D02E", "#C95710", "#FF4589"]
+    },
+    {
+      "name": "Swatch 115",
+      "colors": ["#9CDDC8", "#BFD8AD", "#DDD9AB", "#F7AF63", "#633D2E"]
+    },
+    {
+      "name": "Swatch 116",
+      "colors": ["#4D3B3B", "#DE6262", "#FFB88C", "#FFD0B3", "#F5E0D3"]
+    },
+    {
+      "name": "Swatch 117",
+      "colors": ["#793A57", "#4D3339", "#8C873E", "#D1C5A5", "#A38A5F"]
+    },
+    {
+      "name": "Swatch 118",
+      "colors": ["#FFEFD3", "#FFFEE4", "#D0ECEA", "#9FD6D2", "#8B7A5E"]
+    },
+    {
+      "name": "Swatch 119",
+      "colors": ["#AF2007", "#ED5407", "#FCB623", "#9DB70C", "#2B0317"]
+    },
+    {
+      "name": "Swatch 120",
+      "colors": ["#ECDCB8", "#D5CB8D", "#D6A384", "#AB7599", "#5D585C"]
+    },
+    {
+      "name": "Swatch 121",
+      "colors": ["#222222", "#88AA88", "#AACCAA", "#FFFFDD", "#B10303"]
+    },
+    {
+      "name": "Swatch 122",
+      "colors": ["#441155", "#BB4488", "#FF7788", "#FFBBCC", "#FF88BB"]
+    },
+    {
+      "name": "Swatch 123",
+      "colors": ["#722B27", "#A45548", "#F58253", "#FFF0FD", "#3C3D5C"]
+    },
+    {
+      "name": "Swatch 124",
+      "colors": ["#818E98", "#819077", "#829061", "#82923D", "#82941A"]
+    },
+    {
+      "name": "Swatch 125",
+      "colors": [
+        "#370A00",
+        "#554455",
+        "#BB2200",
+        "#DD9955",
+        "#DDBB99",
+        "#EEEEEE"
+      ]
+    },
+    {
+      "name": "Swatch 126",
+      "colors": ["#49297A", "#6134A3", "#A08EBB", "#DFD6EC"]
+    },
+    {
+      "name": "Swatch 127",
+      "colors": ["#482C21", "#A73E2B", "#D07E0E", "#E9DEB0", "#2F615E"]
+    },
+    {
+      "name": "Swatch 128",
+      "colors": ["#B877A8", "#B8008A", "#FF3366", "#FFCC33", "#CCFF33"]
+    },
+    {
+      "name": "Swatch 129",
+      "colors": ["#F1ECDF", "#D4C9AD", "#C7BA99", "#F58723"]
+    },
+    {
+      "name": "Swatch 130",
+      "colors": ["#A7CD2C", "#BADA5F", "#CEE891", "#E1F5C4", "#50C8C6"]
+    },
+    {
+      "name": "Swatch 131",
+      "colors": ["#D8BF96", "#BA956B", "#8B6A3F", "#615B43", "#0E0B06"]
+    },
+    {
+      "name": "Swatch 132",
+      "colors": ["#570714", "#034B3D", "#036886", "#113A7A", "#061A3B"]
+    },
+    {
+      "name": "Swatch 133",
+      "colors": ["#A2F9DE", "#8CD5D7", "#7C8CC6", "#3C327B", "#B6AAFD"]
+    },
+    {
+      "name": "Swatch 134",
+      "colors": ["#2F2524", "#EF9051", "#937F5C", "#798C5F", "#00A78B"]
+    },
+    {
+      "name": "Swatch 135",
+      "colors": ["#BD442A", "#BF953B", "#A38472", "#608276", "#5C3336"]
+    },
+    {
+      "name": "Swatch 136",
+      "colors": ["#37360D", "#5C5B1E", "#BF3309", "#D63A0B", "#916F27"]
+    },
+    {
+      "name": "Swatch 137",
+      "colors": ["#284000", "#516155", "#718600", "#C2D755", "#DADA99"]
+    },
+    {
+      "name": "Swatch 138",
+      "colors": ["#48C0C0", "#A8C000", "#D8F0F0", "#F01890", "#F0C0D8"]
+    },
+    {
+      "name": "Swatch 139",
+      "colors": ["#FFFCD9", "#F29282", "#F1CB8A", "#9FBEB9", "#8E4771"]
+    },
+    {
+      "name": "Swatch 140",
+      "colors": ["#AB505E", "#D9A071", "#CFC88F", "#A5B090", "#607873"]
+    },
+    { "name": "Swatch 141", "colors": ["#002930"] },
+    { "name": "Swatch 142", "colors": ["#F8F0AF", "#AC4A00"] },
+    {
+      "name": "Swatch 143",
+      "colors": ["#001848", "#301860", "#483078", "#604878", "#906090"]
+    },
+    {
+      "name": "Swatch 144",
+      "colors": ["#ABD9D8", "#ABD9BF", "#D9ABD6", "#B2ABD9", "#DCCC95"]
+    },
+    {
+      "name": "Swatch 145",
+      "colors": ["#3A1E49", "#8F2265", "#7B5182", "#5C77A0", "#B9A8D4"]
+    },
+    {
+      "name": "Swatch 146",
+      "colors": ["#F7F0EA", "#69452C", "#BA9988", "#BF5001", "#F97720"]
+    },
+    {
+      "name": "Swatch 147",
+      "colors": ["#BA000C", "#00C89E", "#F4CA81", "#F4F081", "#B4A487"]
+    },
+    {
+      "name": "Swatch 148",
+      "colors": ["#20E3FF", "#5EFF7E", "#FFFF8D", "#FF64AA", "#9778CD"]
+    },
+    {
+      "name": "Swatch 149",
+      "colors": ["#FBFFB3", "#FF4B63", "#FFA372", "#FFEB8A"]
+    },
+    {
+      "name": "Swatch 150",
+      "colors": [
+        "#78A890",
+        "#90A8A8",
+        "#D7E5DE",
+        "#D87860",
+        "#F0D890",
+        "#F0F0C0"
+      ]
+    },
+    {
+      "name": "Swatch 151",
+      "colors": ["#A6BA7B", "#A92123", "#AAC592", "#B39442", "#C42226"]
+    },
+    {
+      "name": "Swatch 152",
+      "colors": ["#E6B39A", "#E6CBA5", "#EDE3B4", "#8B9E9B", "#6D7578"]
+    },
+    {
+      "name": "Swatch 153",
+      "colors": ["#6D2243", "#BA2640", "#EC5E0C", "#F78F1E", "#85871A"]
+    },
+    {
+      "name": "Swatch 154",
+      "colors": ["#F8DB7E", "#EC6349", "#CE2340", "#6F1B2C", "#310A26"]
+    },
+    {
+      "name": "Swatch 155",
+      "colors": ["#EEDA95", "#B7C27E", "#9A927B", "#8A6A6B", "#805566"]
+    },
+    {
+      "name": "Swatch 156",
+      "colors": ["#022602", "#0C143A", "#3C3C3C", "#D6D5C2", "#C1B0B1"]
+    },
+    {
+      "name": "Swatch 157",
+      "colors": ["#E6CFC3", "#FEFAF7", "#C59C4C", "#D1C2BA", "#BFA29B"]
+    },
+    {
+      "name": "Swatch 158",
+      "colors": ["#FFF9D2", "#FFF9CE", "#FFF7C1", "#FFF4AC", "#FFF3A2"]
+    },
+    {
+      "name": "Swatch 159",
+      "colors": ["#FEEAB5", "#E6BC90", "#A07950", "#58442F", "#38210A"]
+    },
+    {
+      "name": "Swatch 160",
+      "colors": ["#052137", "#002594", "#002CC3", "#0EA9EC", "#00DAEA"]
+    },
+    {
+      "name": "Swatch 161",
+      "colors": ["#B97C62", "#399A90", "#4AD9CA", "#CC9A85", "#E3AB94"]
+    },
+    {
+      "name": "Swatch 162",
+      "colors": [
+        "#32373C",
+        "#445566",
+        "#778899",
+        "#AABBCC",
+        "#D7DCE1",
+        "#DDEEFF"
+      ]
+    },
+    {
+      "name": "Swatch 163",
+      "colors": ["#1C2D40", "#3D1C28", "#BEC6D0", "#ED1A3A", "#F79D6D"]
+    },
+    {
+      "name": "Swatch 164",
+      "colors": ["#F6D76B", "#FF9036", "#D6254D", "#FF5475", "#FDEBA9"]
+    },
+    {
+      "name": "Swatch 165",
+      "colors": ["#8E9E82", "#CACCB6", "#F2F0DF", "#A9C1D9", "#607890"]
+    },
+    {
+      "name": "Swatch 166",
+      "colors": ["#651366", "#A71A5B", "#E7204E", "#F76E2A", "#F0C505"]
+    },
+    {
+      "name": "Swatch 167",
+      "colors": ["#FAFBD5", "#D0E7C8", "#99C7BA", "#64989D", "#5F5D66"]
+    },
+    {
+      "name": "Swatch 168",
+      "colors": ["#B1654B", "#F69272", "#FEC08F", "#FFF5B7", "#99D1B6"]
+    },
+    {
+      "name": "Swatch 169",
+      "colors": ["#DECDB3", "#F5818E", "#FAADA7", "#F8EDCD", "#FEF3DD"]
+    },
+    {
+      "name": "Swatch 170",
+      "colors": ["#EDBEB8", "#A1022B", "#D4B189", "#E2DD8C", "#7F9D55"]
+    },
+    {
+      "name": "Swatch 171",
+      "colors": ["#F6EEE1", "#C1C5AA", "#508289", "#3F6862", "#284648"]
+    },
+    {
+      "name": "Swatch 172",
+      "colors": ["#0C4068", "#3593C9", "#56A9DD", "#037365", "#123378"]
+    },
+    {
+      "name": "Swatch 173",
+      "colors": ["#0F929E", "#257DA0", "#3B68A3", "#575484", "#734066"]
+    },
+    {
+      "name": "Swatch 174",
+      "colors": ["#1F201E", "#346B22", "#6D6D70", "#609933", "#BFCF2A"]
+    },
+    {
+      "name": "Swatch 175",
+      "colors": ["#4D1D7A", "#7F50AB", "#B69DCE", "#F74B1B", "#F7A28B"]
+    },
+    {
+      "name": "Swatch 176",
+      "colors": ["#9D7E79", "#CCAC95", "#9A947C", "#748B83", "#5B756C"]
+    },
+    {
+      "name": "Swatch 177",
+      "colors": ["#A8A7A7", "#CC527A", "#E8175D", "#474747", "#363636"]
+    },
+    {
+      "name": "Swatch 178",
+      "colors": ["#BF2A23", "#A6AD3C", "#F0CE4E", "#CF872E", "#8A211D"]
+    },
+    {
+      "name": "Swatch 179",
+      "colors": ["#FF8C94", "#C4CBB7", "#EBEFC9", "#EEE0B7", "#E8CAAF"]
+    },
+    {
+      "name": "Swatch 180",
+      "colors": ["#C2935A", "#F1DE63", "#FFB163", "#FC88B0", "#AD4877"]
+    },
+    {
+      "name": "Swatch 181",
+      "colors": ["#383352", "#8A3434", "#8F6B6B", "#6B8F8F", "#4BA6C4"]
+    },
+    {
+      "name": "Swatch 182",
+      "colors": ["#005029", "#86AC58", "#E9FEDA", "#FFD02D", "#920303"]
+    },
+    {
+      "name": "Swatch 183",
+      "colors": ["#8EDDCB", "#E5E796", "#E89069", "#D55B6A", "#900578"]
+    },
+    {
+      "name": "Swatch 184",
+      "colors": ["#C0ABCC", "#966BAE", "#873AB3", "#7416AA", "#48086C"]
+    },
+    {
+      "name": "Swatch 185",
+      "colors": ["#F57474", "#F5A393", "#E7E4CB", "#ADEEEE", "#C7E6E6"]
+    },
+    {
+      "name": "Swatch 186",
+      "colors": ["#5B6328", "#848F47", "#DED879", "#E1E8BA", "#E1E1CB"]
+    },
+    {
+      "name": "Swatch 187",
+      "colors": ["#78191F", "#A9C95F", "#FFCBCB", "#FFE9E9"]
+    },
+    {
+      "name": "Swatch 188",
+      "colors": ["#91CFCA", "#A6D1C8", "#C7D5C8", "#E7D6CF", "#EFBDC0"]
+    },
+    {
+      "name": "Swatch 189",
+      "colors": ["#E7E79D", "#C0D890", "#78A890", "#606078", "#D8A878"]
+    },
+    {
+      "name": "Swatch 190",
+      "colors": ["#184848", "#006060", "#007878", "#A8C030", "#F0F0D8"]
+    },
+    {
+      "name": "Swatch 191",
+      "colors": ["#0020B0", "#001A8F", "#001266", "#000C44", "#00082B"]
+    },
+    {
+      "name": "Swatch 192",
+      "colors": ["#EBE3D9", "#E0CDAF", "#C2BC74", "#6E615A", "#B8B8B8"]
+    },
+    {
+      "name": "Swatch 193",
+      "colors": ["#C0A5B4", "#4797CC", "#B7EDDD", "#0A0F35", "#AFAD86"]
+    },
+    {
+      "name": "Swatch 194",
+      "colors": ["#112B23", "#748C31", "#C9CC6A", "#FFE8B3", "#59350B"]
+    },
+    {
+      "name": "Swatch 195",
+      "colors": ["#FFD2DB", "#ECDBFF", "#FFF3DB", "#D5F3FF", "#D20000"]
+    },
+    {
+      "name": "Swatch 196",
+      "colors": ["#EB81B6", "#F9B8CF", "#FFF799", "#81D0D1", "#38BEBC"]
+    },
+    {
+      "name": "Swatch 197",
+      "colors": ["#00725B", "#1B9E84", "#851212", "#B91111", "#E76A6A"]
+    },
+    {
+      "name": "Swatch 198",
+      "colors": ["#4D4E4D", "#9E6642", "#F5A56C", "#72828A", "#91B2C4"]
+    },
+    {
+      "name": "Swatch 199",
+      "colors": ["#C96131", "#D87860", "#E91233", "#EBBC75", "#FB832F"]
+    },
+    {
+      "name": "Swatch 200",
+      "colors": ["#FDCFBF", "#FEB89F", "#E23D75", "#5F0D3B", "#742365"]
+    },
+    {
+      "name": "Swatch 201",
+      "colors": ["#DDE0CF", "#C6BE9A", "#AD8B32", "#937460", "#8C5B7B"]
+    },
+    {
+      "name": "Swatch 202",
+      "colors": ["#85A29E", "#FFEBBF", "#F0D442", "#F59330", "#B22148"]
+    },
+    {
+      "name": "Swatch 203",
+      "colors": ["#FFDBEB", "#FFDBF9", "#FFC3DA", "#EA9AC9", "#EF2673"]
+    },
+    {
+      "name": "Swatch 204",
+      "colors": ["#FEF6DC", "#AD82B4", "#53144F", "#FF2869", "#009AA8"]
+    },
+    {
+      "name": "Swatch 205",
+      "colors": ["#FFFAD8", "#F4E48E", "#A5776B", "#046A4B", "#610424"]
+    },
+    {
+      "name": "Swatch 206",
+      "colors": ["#083838", "#C03055", "#E3613F", "#C0BE30", "#30C06F"]
+    },
+    {
+      "name": "Swatch 207",
+      "colors": ["#B5AFD3", "#FFC38F", "#FE9C81", "#E95E75", "#1C184A"]
+    },
+    {
+      "name": "Swatch 208",
+      "colors": ["#4E5E6E", "#F7D399", "#F0B75B", "#F09D62", "#E66A57"]
+    },
+    {
+      "name": "Swatch 209",
+      "colors": ["#A48887", "#C1BAB0", "#ECF2BD", "#CCD9B8", "#ADB7AF"]
+    },
+    {
+      "name": "Swatch 210",
+      "colors": [
+        "#222E68",
+        "#333438",
+        "#9E9974",
+        "#7C8EE6",
+        "#D3CEA6",
+        "#F8F9FA"
+      ]
+    },
+    {
+      "name": "Swatch 211",
+      "colors": ["#7A7AA8", "#A7084D", "#CDE4DD", "#DDB9FF", "#E2DDCB"]
+    },
+    {
+      "name": "Swatch 212",
+      "colors": ["#A7C5BD", "#E5DDCB", "#EB7B59", "#CF4647", "#524656"]
+    },
+    {
+      "name": "Swatch 213",
+      "colors": ["#4D3B3B", "#DE6262", "#FFB88C", "#FFD0B3", "#F5E0D3"]
+    },
+    {
+      "name": "Swatch 214",
+      "colors": ["#FF0092", "#FFCA1B", "#B6FF00", "#228DFF", "#BA01FF"]
+    },
+    {
+      "name": "Swatch 215",
+      "colors": ["#CC5D4C", "#FFFEC6", "#C7D1AF", "#96B49C", "#5B5847"]
+    },
+    {
+      "name": "Swatch 216",
+      "colors": ["#D1A1CB", "#F9D7D8", "#752B50", "#839D78", "#5D3349"]
+    },
+    {
+      "name": "Swatch 217",
+      "colors": ["#675874", "#96A4A1", "#454746", "#343137", "#370E5C"]
+    },
+    {
+      "name": "Swatch 218",
+      "colors": ["#E962FF", "#FF4FB5", "#F435D8", "#CA1FDD", "#DD2E89"]
+    },
+    {
+      "name": "Swatch 219",
+      "colors": ["#FCF1B0", "#FD6907", "#763B0F", "#F41370", "#0BDD97"]
+    },
+    {
+      "name": "Swatch 220",
+      "colors": ["#CF8673", "#E5D1B0", "#B8A57B", "#819071", "#34615A"]
+    },
+    {
+      "name": "Swatch 221",
+      "colors": ["#4A848B", "#BADADA", "#F8D5CA", "#EE7980", "#8B5959"]
+    },
+    {
+      "name": "Swatch 222",
+      "colors": ["#D98685", "#DBCDB9", "#FFC8D5", "#FFF9B8", "#FFFBF2"]
+    },
+    {
+      "name": "Swatch 223",
+      "colors": ["#7C7C7E", "#868688", "#949195", "#AFADB4", "#D656BF"]
+    },
+    {
+      "name": "Swatch 224",
+      "colors": ["#C46564", "#F0E999", "#B8C99D", "#9B726F", "#EEB15B"]
+    },
+    {
+      "name": "Swatch 225",
+      "colors": ["#F8DAFB", "#E8DAFB", "#DADDFB", "#DAEDFB", "#DAFBF8"]
+    },
+    {
+      "name": "Swatch 226",
+      "colors": ["#D31900", "#FF6600", "#FFF2AF", "#7CB490"]
+    },
+    {
+      "name": "Swatch 227",
+      "colors": ["#EECCBB", "#F1731F", "#E03E36", "#BD0D59", "#730662"]
+    },
+    {
+      "name": "Swatch 228",
+      "colors": ["#DD97E3", "#F9FF88", "#A1F0FF", "#FDA1A1", "#A2FF97"]
+    },
+    {
+      "name": "Swatch 229",
+      "colors": ["#C7654A", "#3E0300", "#FFB546", "#741B15", "#B7423B"]
+    },
+    {
+      "name": "Swatch 230",
+      "colors": ["#ECE0EA", "#FCC3BC", "#FDECC1", "#C09AA5", "#5B423E"]
+    },
+    {
+      "name": "Swatch 231",
+      "colors": ["#270333", "#401466", "#208577", "#A3B82E", "#DE7331"]
+    },
+    {
+      "name": "Swatch 232",
+      "colors": ["#A1DBB2", "#FEE5AD", "#FACA66", "#F7A541", "#F45D4C"]
+    },
+    {
+      "name": "Swatch 233",
+      "colors": ["#FFF0DD", "#F8D0C8", "#FA9D6B", "#B4C65A", "#77CAB4"]
+    },
+    {
+      "name": "Swatch 234",
+      "colors": [
+        "#4B2F14",
+        "#FF8000",
+        "#FF8F1F",
+        "#FF9F40",
+        "#FFB56B",
+        "#FFCB96"
+      ]
+    },
+    {
+      "name": "Swatch 235",
+      "colors": ["#8BE8AF", "#8CFFD3", "#9ADE6D", "#C49525", "#C4BE4F"]
+    },
+    {
+      "name": "Swatch 236",
+      "colors": ["#FAE8D0", "#E1B0C6", "#C21A4B", "#FB4EA0", "#3F0039"]
+    },
+    {
+      "name": "Swatch 237",
+      "colors": ["#270D05", "#F19B07", "#F13E07", "#F8EFEC", "#673222"]
+    },
+    {
+      "name": "Swatch 238",
+      "colors": ["#FC580C", "#FC6B0A", "#F8872E", "#FFA927", "#FDCA49"]
+    },
+    {
+      "name": "Swatch 239",
+      "colors": ["#444444", "#FCF7D1", "#A9A17A", "#B52C00", "#8C0005"]
+    },
+    {
+      "name": "Swatch 240",
+      "colors": ["#F42C43", "#8E2359", "#F36F27", "#605D4F", "#EDD523"]
+    },
+    {
+      "name": "Swatch 241",
+      "colors": ["#EE9988", "#FFAA99", "#FFCCBB", "#FFDD66", "#997744"]
+    },
+    {
+      "name": "Swatch 242",
+      "colors": ["#E2DBD5", "#DCC5B7", "#CEA36E", "#CA825A", "#9CAEAE"]
+    },
+    {
+      "name": "Swatch 243",
+      "colors": ["#33CCFF", "#3388FF", "#DD99FF", "#FF99D5", "#FF33AA"]
+    },
+    {
+      "name": "Swatch 244",
+      "colors": ["#00D8F0", "#00C0F0", "#0060C0", "#003078", "#000018"]
+    },
+    {
+      "name": "Swatch 245",
+      "colors": ["#EBC57A", "#F3A14F", "#332E25", "#6F7C61", "#D1DA98"]
+    },
+    {
+      "name": "Swatch 246",
+      "colors": ["#61512E", "#C8D376", "#EB4A4A", "#EEAB54"]
+    },
+    {
+      "name": "Swatch 247",
+      "colors": ["#3D2704", "#5E4C14", "#731911", "#8C241B", "#8C7224"]
+    },
+    {
+      "name": "Swatch 248",
+      "colors": ["#E3EAE9", "#95DCCD", "#7299A8", "#5C5075", "#422D3C"]
+    },
+    {
+      "name": "Swatch 249",
+      "colors": ["#4EB3DE", "#8DE0A6", "#FCF09F", "#F27C7C", "#DE528C"]
+    },
+    {
+      "name": "Swatch 250",
+      "colors": ["#A7321C", "#FFDC68", "#CC982A", "#928941", "#352504"]
+    },
+    {
+      "name": "Swatch 251",
+      "colors": ["#F07241", "#C04848", "#601848", "#480048", "#300030"]
+    },
+    {
+      "name": "Swatch 252",
+      "colors": ["#2C2E20", "#A58E6F", "#FFC198", "#FFA624", "#D7615D"]
+    },
+    {
+      "name": "Swatch 253",
+      "colors": ["#86332A", "#AA4466", "#DD6677", "#FF99BB", "#FFEEEE"]
+    },
+    {
+      "name": "Swatch 254",
+      "colors": ["#8E3A75", "#8E557E", "#8E7286", "#997A90", "#BF86AE"]
+    },
+    {
+      "name": "Swatch 255",
+      "colors": ["#F7B97E", "#C59678", "#AC7C6E", "#8F6861", "#8D686F"]
+    },
+    {
+      "name": "Swatch 256",
+      "colors": ["#6DC593", "#C7DAFA", "#0D7872", "#5C726F", "#B6AA84"]
+    },
+    {
+      "name": "Swatch 257",
+      "colors": ["#B35C1E", "#2A1E18", "#396E60", "#B5BC92", "#DDCB9B"]
+    },
+    {
+      "name": "Swatch 258",
+      "colors": ["#8C001C", "#A80022", "#D94709", "#FAC589", "#FCDEBB"]
+    },
+    {
+      "name": "Swatch 259",
+      "colors": ["#110000", "#662211", "#AA2222", "#DD9966", "#EEDDDD"]
+    },
+    {
+      "name": "Swatch 260",
+      "colors": ["#4B1139", "#3B4058", "#2A6E78", "#7A907C", "#C9B180"]
+    },
+    {
+      "name": "Swatch 261",
+      "colors": ["#C46564", "#F0E999", "#B8C99D", "#9B726F", "#EEB15B"]
+    },
+    {
+      "name": "Swatch 262",
+      "colors": ["#029DAF", "#E5D599", "#FFC219", "#F07C19", "#E32551"]
+    },
+    {
+      "name": "Swatch 263",
+      "colors": ["#F04155", "#FF823A", "#F2F26F", "#FFF7BD", "#95CFB7"]
+    },
+    {
+      "name": "Swatch 264",
+      "colors": ["#76A4A1", "#D0BABC", "#E6BAB1", "#E2DACF", "#C17A8C"]
+    },
+    {
+      "name": "Swatch 265",
+      "colors": ["#5A2F0C", "#6A360E", "#88531D", "#9D6437", "#CA8B56"]
+    },
+    {
+      "name": "Swatch 266",
+      "colors": ["#FFF6EC", "#DA7340", "#C6573B", "#9D322A", "#86332A"]
+    },
+    {
+      "name": "Swatch 267",
+      "colors": ["#23484D", "#275D65", "#678D81", "#85A379", "#9CC12A"]
+    },
+    {
+      "name": "Swatch 268",
+      "colors": ["#EBEAAE", "#EEC852", "#77A57F", "#3A8075", "#512E4C"]
+    },
+    {
+      "name": "Swatch 269",
+      "colors": ["#783048", "#904848", "#A84860", "#D86060", "#F06048"]
+    },
+    {
+      "name": "Swatch 270",
+      "colors": ["#6B6B6B", "#778485", "#7DADB0", "#948F85", "#D4C298"]
+    },
+    {
+      "name": "Swatch 271",
+      "colors": ["#0E2A3A", "#9C9B79", "#C7C598", "#EEC747", "#FFA024"]
+    },
+    {
+      "name": "Swatch 272",
+      "colors": ["#EDD58F", "#C2BF92", "#66AC92", "#686077", "#641F5E"]
+    },
+    {
+      "name": "Swatch 273",
+      "colors": ["#9F0A28", "#D55C2B", "#F6E7D3", "#89A46F", "#55203C"]
+    },
+    {
+      "name": "Swatch 274",
+      "colors": ["#2F2BAD", "#AD2BAD", "#E42692", "#F71568", "#F7DB15"]
+    },
+    {
+      "name": "Swatch 275",
+      "colors": ["#D3E2B6", "#C3DBB4", "#AACCB1", "#87BDB1", "#68B3AF"]
+    },
+    {
+      "name": "Swatch 276",
+      "colors": ["#FFDCB5", "#7D3E37", "#DCBA3E", "#898140", "#3F3D2E"]
+    },
+    {
+      "name": "Swatch 277",
+      "colors": ["#670324", "#781435", "#8D123B", "#B1164A", "#D2094C"]
+    },
+    {
+      "name": "Swatch 278",
+      "colors": ["#FEE4A7", "#DEC79C", "#BEA57C", "#B89E7C", "#856248"]
+    },
+    {
+      "name": "Swatch 279",
+      "colors": ["#FE97C1", "#F33F96", "#CFCABC", "#611149", "#BB2A7A"]
+    },
+    {
+      "name": "Swatch 280",
+      "colors": ["#001818", "#001890", "#1848F0", "#4878F0", "#C0C0C0"]
+    },
+    {
+      "name": "Swatch 281",
+      "colors": ["#E07976", "#969195", "#B5B1AD", "#E0D5C9", "#FFEFDC"]
+    },
+    {
+      "name": "Swatch 282",
+      "colors": ["#303060", "#484878", "#7878A8", "#A8A8D8", "#C0C0D8"]
+    },
+    {
+      "name": "Swatch 283",
+      "colors": ["#165C69", "#45988E", "#E8174B", "#F54070", "#FFEAB8"]
+    },
+    {
+      "name": "Swatch 284",
+      "colors": ["#D45E80", "#C6838C", "#CFBF9E", "#F7DEA8", "#F6BE5F"]
+    },
+    {
+      "name": "Swatch 285",
+      "colors": ["#F1E8B4", "#B2BB91", "#D7BF5E", "#D16344", "#83555E"]
+    },
+    { "name": "Swatch 286", "colors": ["#4180AB"] },
+    { "name": "Swatch 287", "colors": ["#8AB3CF", "#BDD1DE", "#E4EBF0"] },
+    {
+      "name": "Swatch 288",
+      "colors": ["#E7E79D", "#C0D890", "#78A890", "#606078", "#D8A878"]
+    },
+    {
+      "name": "Swatch 289",
+      "colors": ["#99928D", "#D1772E", "#850000", "#4F0000", "#1F0808"]
+    },
+    {
+      "name": "Swatch 290",
+      "colors": ["#F5FBFB", "#756EB2", "#A680B1", "#F9B0E8", "#FFD5FF"]
+    },
+    {
+      "name": "Swatch 291",
+      "colors": ["#E63254", "#F24F6E", "#FA637F", "#FB7890", "#FF8DA3"]
+    },
+    {
+      "name": "Swatch 292",
+      "colors": ["#DBC3A4", "#D9BB94", "#896A41", "#3D2E1A", "#211404"]
+    },
+    {
+      "name": "Swatch 293",
+      "colors": ["#831A00", "#B04200", "#716D2E", "#FFF5B6", "#444983"]
+    },
+    {
+      "name": "Swatch 294",
+      "colors": ["#004010", "#328C43", "#499957", "#99C479", "#E8E5B1"]
+    },
+    {
+      "name": "Swatch 295",
+      "colors": [
+        "#2A4261",
+        "#445B78",
+        "#5C789E",
+        "#7C9BC4",
+        "#9FB5D1",
+        "#CFD7E2"
+      ]
+    },
+    {
+      "name": "Swatch 296",
+      "colors": ["#5A647C", "#8AA99F", "#B4E2B0", "#BDCE7E", "#ECFFFD"]
+    },
+    {
+      "name": "Swatch 297",
+      "colors": [
+        "#F07241",
+        "#C04848",
+        "#601848",
+        "#480048",
+        "#300030",
+        "#480048",
+        "#601848",
+        "#C04848",
+        "#F07241"
+      ]
+    },
+    {
+      "name": "Swatch 298",
+      "colors": ["#1E7A17", "#35533B", "#9BB8A6", "#D02A42", "#D1DCBA"]
+    },
+    {
+      "name": "Swatch 299",
+      "colors": ["#A2BB3D", "#D60257", "#EDFF29", "#F03D75", "#FF9900"]
+    },
+    {
+      "name": "Swatch 300",
+      "colors": ["#783D74", "#86B8B1", "#AD8798", "#CE9256", "#E9725A"]
+    },
+    {
+      "name": "Swatch 301",
+      "colors": ["#625146", "#CEC7B8", "#E6E0CF", "#FFE2E2"]
+    },
+    {
+      "name": "Swatch 302",
+      "colors": [
+        "#9D0500",
+        "#D70004",
+        "#F54E0A",
+        "#EE6201",
+        "#F7A100",
+        "#FFFF00"
+      ]
+    },
+    {
+      "name": "Swatch 303",
+      "colors": [
+        "#FFFF01",
+        "#D6A11C",
+        "#CB6527",
+        "#FF7575",
+        "#FE9A00",
+        "#441D61",
+        "#1F0D2D",
+        "#001D58",
+        "#441D61",
+        "#9E0031",
+        "#700000",
+        "#0F243E",
+        "#538DD5",
+        "#002570",
+        "#4F2270",
+        "#1F1848",
+        "#29123A",
+        "#CFABF7",
+        "#A0C1E8",
+        "#BFD5EF",
+        "#A657E7"
+      ]
+    },
+    {
+      "name": "Swatch 304",
+      "colors": [
+        "#FAFBD5",
+        "#D0E7C8",
+        "#99C7BA",
+        "#64989D",
+        "#5F5D66",
+        "#ABD9D8",
+        "#ABD9BF",
+        "#D9ABD6",
+        "#B2ABD9",
+        "#DCCC95",
+        "#FF8C94",
+        "#C4CBB7",
+        "#EBEFC9",
+        "#EEE0B7",
+        "#E8CAAF"
+      ]
+    },
+    {
+      "name": "Swatch 305",
+      "colors": [
+        "#010101",
+        "#8EC0E3",
+        "#DDDCE1",
+        "#D4D4D9",
+        "#E2DEE2",
+        "#CEE5F2",
+        "#FDE50F",
+        "#DF1B4B"
+      ]
+    },
+    {
+      "name": "Swatch 306",
+      "colors": [
+        "#4B1316",
+        "#444133",
+        "#FF404B",
+        "#FFFC7F",
+        "#C8A0DC",
+        "#C4C3D0",
+        "#CCCBFF"
+      ]
+    },
+    {
+      "name": "Swatch 307",
+      "colors": [
+        "#0F243E",
+        "#16365C",
+        "#235795",
+        "#538DD5",
+        "#6B9EDB",
+        "#366092",
+        "#235795",
+        "#538DD5",
+        "#1D0C2A",
+        "#866ABE",
+        "#6159CF",
+        "#BA7AE2",
+        "#F2F2F2",
+        "#C5D9F1",
+        "#B490E4",
+        "#B2ABD9",
+        "#CFABF7",
+        "#A0C1E8",
+        "#BFD5EF",
+        "#A657E7"
+      ]
+    },
+    {
+      "name": "Swatch 308",
+      "colors": [
+        "#DCDCDC",
+        "#BEBEBE",
+        "#D2D2D2",
+        "#B4B4B4",
+        "#C8C8C8",
+        "#AAAAAA",
+        "#BEBEBE",
+        "#A0A0A0",
+        "#B4B4B4",
+        "#969696",
+        "#AAAAAA",
+        "#828282",
+        "#A0A0A0",
+        "#787878",
+        "#969696",
+        "#6E6E6E",
+        "#8C8C8C",
+        "#646464",
+        "#828282",
+        "#5A5A5A",
+        "#787878",
+        "#505050",
+        "#6E6E6E",
+        "#464646",
+        "#646464",
+        "#3C3C3C",
+        "#5A5A5A",
+        "#323232",
+        "#505050",
+        "#282828",
+        "#464646",
+        "#1E1E1E",
+        "#3C3C3C",
+        "#141414",
+        "#323232",
+        "#0A0A0A",
+        "#282828"
+      ]
+    },
+    {
+      "name": "Swatch 309",
+      "colors": [
+        "#86B0E2",
+        "#90B6E4",
+        "#827DEB",
+        "#C5D9F1",
+        "#7A8FE6",
+        "#C5D9F1",
+        "#538DD5",
+        "#C7E3EF",
+        "#8783E1",
+        "#C5D9F1",
+        "#538DD5",
+        "#C2E1F4",
+        "#538DD5",
+        "#C5D9F1",
+        "#B490E4",
+        "#B2ABD9",
+        "#CFABF7",
+        "#A0C1E8",
+        "#BFD5EF",
+        "#C5D9F1"
+      ]
+    },
+    {
+      "name": "Swatch 310",
+      "colors": [
+        "#0F243E",
+        "#16365C",
+        "#235795",
+        "#538DD5",
+        "#6B9EDB",
+        "#366092",
+        "#235795",
+        "#538DD5",
+        "#1A175D",
+        "#538DD5",
+        "#6159CF",
+        "#9A3BD5",
+        "#5359D5",
+        "#C5D9F1",
+        "#B490E4",
+        "#B2ABD9",
+        "#CFABF7",
+        "#A0C1E8",
+        "#BFD5EF",
+        "#C5D9F1"
+      ]
+    },
+    {
+      "name": "Swatch 311",
+      "colors": [
+        "#B73333",
+        "#931515",
+        "#740B00",
+        "#5A0404",
+        "#440303",
+        "#210101"
+      ]
+    },
+    {
+      "name": "Swatch 312",
+      "colors": [
+        "#F5C08C",
+        "#E6A3A6",
+        "#FFD37A",
+        "#FFC08C",
+        "#FFD37A",
+        "#F5C08C",
+        "#F5B598",
+        "#F5C08C",
+        "#E6A3A6",
+        "#D197B5"
+      ]
+    }
+  ]
+}

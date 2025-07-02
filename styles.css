@@ -1,0 +1,407 @@
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica,
+    Arial, sans-serif;
+  background-color: #f0f2f5;
+  color: #1c1e21;
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  overflow: hidden;
+  position: relative;
+}
+.controls {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  background-color: rgba(255, 255, 255, 0.95);
+  padding: 15px;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  width: 360px; /* NARROWER */
+  max-height: calc(100vh - 40px);
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 10px; /* TIGHTER */
+  font-size: 13px;
+  z-index: 1000;
+  backdrop-filter: blur(5px);
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+.controls.hidden {
+  opacity: 0;
+  transform: translateX(-100%);
+  pointer-events: none;
+}
+.visualizer {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: #fff;
+  z-index: 1;
+}
+.toggle-controls-btn {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  background-color: rgba(8, 102, 255, 0.9);
+  color: white;
+  border: none;
+  padding: 8px 12px;
+  border-radius: 6px;
+  font-weight: bold;
+  cursor: pointer;
+  font-size: 12px;
+  z-index: 1001;
+  backdrop-filter: blur(5px);
+  transition: background-color 0.2s;
+  display: none;
+}
+.toggle-controls-btn:hover {
+  background-color: rgba(6, 85, 212, 0.9);
+}
+.toggle-controls-btn.visible {
+  display: block;
+}
+/* .object-bar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 10px;
+  color: white;
+  text-shadow: 0 0 2px black;
+  box-sizing: border-box;
+  border: 1px solid #eee;
+  border-radius: 2px;
+} */
+fieldset {
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  padding: 8px 12px 12px 12px;
+}
+legend {
+  font-weight: bold;
+  padding: 0 5px;
+  color: #333;
+  font-size: 13px;
+}
+.main-control-group {
+  display: grid;
+  grid-template-columns: 100px 1fr; /* NARROWER LABEL COLUMN */
+  gap: 8px;
+  align-items: center;
+}
+
+/* NEW rules for neater property controls */
+.prop-control-group {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8px 10px;
+  align-items: center;
+}
+
+.prop-control-group .input-pair:nth-child(3) {
+  grid-column: 1 / -1; /* Span full width */
+}
+/* END new rules */
+
+.input-pair {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 6px;
+  align-items: center;
+}
+
+.control-point-list {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  margin-top: 8px;
+}
+.control-point {
+  display: grid;
+  grid-template-columns: 70px 1fr 30px; /* REVISED for better spacing */
+  align-items: center;
+  gap: 6px;
+}
+.control-point .cp-index {
+  position: relative;
+}
+.control-point .cp-index::before {
+  content: "%";
+  position: absolute;
+  right: 8px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #999;
+  font-size: 10px;
+  pointer-events: none;
+}
+label {
+  font-weight: 500;
+  white-space: nowrap;
+}
+input[type="number"],
+input[type="text"] {
+  width: 100%; /* Changed to 100% to fill grid area */
+  padding: 2px 4px;
+  margin: 0;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  font-size: 12px;
+  height: 28px;
+  text-align: right;
+}
+select {
+  padding: 2px 4px;
+  margin: 0;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  font-size: 12px;
+  height: 28px;
+  background-color: white;
+}
+.prop-loop-length-display {
+  display: inline-block;
+  padding: 2px 4px;
+  background-color: #f5f5f5;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 12px;
+  height: 28px;
+  line-height: 24px;
+  color: #666;
+  min-width: 40px;
+  text-align: center;
+}
+input[type="color"] {
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  height: 32px;
+  cursor: pointer;
+}
+button {
+  background-color: #0866ff;
+  color: white;
+  border: none;
+  padding: 8px 14px; /* NEATER PADDING */
+  border-radius: 6px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.2s;
+  font-size: 13px; /* SMALLER FONT */
+}
+button:hover {
+  background-color: #0655d4;
+}
+.add-btn {
+  background-color: #42b72a;
+  padding: 5px 10px; /* NEATER PADDING */
+  font-size: 11px;
+}
+.add-btn:hover {
+  background-color: #36a420;
+}
+.remove-btn {
+  background: none;
+  border: none;
+  color: #ff4d4d;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 20px;
+  padding: 0;
+  line-height: 1;
+  text-align: center;
+}
+
+fieldset.collapsible > .fieldset-content {
+  display: none;
+  padding-top: 8px;
+}
+
+fieldset.collapsible.open > .fieldset-content {
+  display: block;
+}
+
+fieldset.collapsible > legend {
+  cursor: pointer;
+  user-select: none;
+  background-color: #f0f0f0;
+  padding: 4px 8px;
+  border-radius: 4px;
+}
+
+/* Pendulum-specific CSS */
+.pendulum-list {
+  margin-top: 8px;
+}
+
+.pendulum-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 11px;
+}
+
+.pendulum-table th {
+  background-color: #f0f0f0;
+  padding: 4px 2px;
+  border: 1px solid #ddd;
+  font-weight: bold;
+  font-size: 10px;
+  text-align: center;
+}
+
+.pendulum-table td {
+  padding: 2px;
+  border: 1px solid #ddd;
+  text-align: center;
+}
+
+.pendulum-table input[type="number"] {
+  width: 100%;
+  height: 22px;
+  font-size: 10px;
+  padding: 1px 2px;
+  border: none;
+  background: transparent;
+  text-align: center;
+}
+
+.pendulum-table input[type="checkbox"] {
+  margin: 0;
+  transform: scale(0.8);
+}
+
+.pendulum-table .remove-btn {
+  font-size: 14px;
+  padding: 0;
+  line-height: 1;
+  background: none;
+  border: none;
+  color: #ff4d4d;
+  cursor: pointer;
+}
+/* === ADD THIS NEW CSS FOR THE TIME BLOCK === */
+
+/* Arranges the four controls into a 2x2 grid */
+fieldset.collapsible.time-controls.open > .fieldset-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8px 1px; /* 8px space between rows, 16px between columns */
+}
+/* Overrides the default layout for labels and inputs in this block */
+.time-controls .main-control-group {
+  grid-template-columns: auto 1fr; /* Label takes minimal space, input takes the rest */
+}
+
+/* Sets the specific 50px width for the number inputs in this block */
+.time-controls input[type="number"] {
+  width: 80px;
+}
+
+/* === CSS FOR CONTROL POINT HEADERS === */
+.control-point-header {
+  display: grid;
+  /* This grid layout must match the .control-point class */
+  grid-template-columns: 70px 1fr 30px;
+  gap: 6px;
+  padding: 4px 0;
+  margin-top: 8px;
+  border-bottom: 1px solid #d0d0d0;
+  font-size: 11px;
+  font-weight: 600;
+  color: #333;
+
+  letter-spacing: 0.5px;
+}
+
+.control-point-header span:first-child {
+  /* Aligns "Percentage" header with the right-aligned number inputs */
+  text-align: right;
+  padding-right: 18px; /* Accounts for the '%' sign in the inputs */
+}
+
+/* --- PALETTE LOADER UI STYLES --- */
+#paletteFileInput {
+  display: inline-block;
+  width: auto;
+}
+#paletteSelect {
+  display: none;
+  width: auto;
+}
+#applyPaletteBtn {
+  display: none;
+  width: 50%; /* Half width of container */
+}
+#palettePreview {
+  display: none;
+}
+#paletteColorBlocks {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  gap: 2px;
+}
+.palette-color-block {
+  width: 20px;
+  height: 20px;
+  border: 1px solid #ccc;
+  border-radius: 2px;
+  flex-shrink: 0;
+}
+
+/* Nested fieldset styles for palette section */
+/* fieldset.palette-section {
+  margin: 0 0 15px 0;
+  border-color: #bbb;
+  background-color: #f8f9fa;
+}
+
+fieldset.palette-section legend {
+  font-size: 12px;
+  color: #555;
+  background-color: #e9ecef;
+} */
+
+/* Palette loader controls styling */
+.palette-loader-controls {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 10px;
+}
+
+.palette-loader-controls label {
+  font-size: 12px;
+  font-weight: 600;
+}
+
+/* === PAN AND ZOOM STYLES === */
+.visualizer svg {
+  cursor: grab;
+  user-select: none;
+}
+
+.visualizer svg:active {
+  cursor: grabbing;
+}
+
+/* Style for the panzoom group to ensure proper interaction */
+#panzoom-group {
+  cursor: inherit;
+}
+
+/* Smooth transitions for zoom operations */
+#panzoom-group * {
+  vector-effect: non-scaling-stroke;
+}
