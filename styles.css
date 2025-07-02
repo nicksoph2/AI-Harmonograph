@@ -168,15 +168,16 @@ select {
 .prop-loop-length-display {
   display: inline-block;
   padding: 2px 4px;
-  background-color: #f5f5f5;
-  border: 1px solid #ddd;
+  background-color: #ddd;
+  /* border: 1px solid #ddd; */
   border-radius: 4px;
   font-size: 12px;
-  height: 28px;
+  height: 24px;
   line-height: 24px;
   color: #666;
-  min-width: 40px;
-  text-align: center;
+  min-width: 70px;
+  max-width: 95px;
+  text-align: right;
 }
 input[type="color"] {
   width: 100%;
@@ -203,8 +204,8 @@ button:hover {
   background-color: #0655d4;
 }
 .add-btn {
-  background-color: #42b72a;
-  padding: 5px 10px; /* NEATER PADDING */
+  background-color: #4c6a43;
+  padding: 10px 10px; /* NEATER PADDING */
   font-size: 11px;
 }
 .add-btn:hover {
@@ -234,7 +235,7 @@ fieldset.collapsible.open > .fieldset-content {
 fieldset.collapsible > legend {
   cursor: pointer;
   user-select: none;
-  background-color: #f0f0f0;
+  background-color: #e0ebfc;
   padding: 4px 8px;
   border-radius: 4px;
 }

@@ -794,8 +794,8 @@ function renderObjects(points) {
 // --- COLLAPSIBLE FIELDSETS ---
 function initializeCollapsibleFieldsets() {
   document.querySelectorAll("fieldset.collapsible").forEach((fieldset) => {
-    // Open all fieldsets by default
-    fieldset.classList.add("open");
+    // Close all fieldsets by default
+    fieldset.classList.remove("open");
     const legend = fieldset.querySelector("legend");
     if (legend) {
       legend.addEventListener("click", function () {
@@ -1109,7 +1109,9 @@ function applySelectedPalette(paletteIndex) {
   showPaletteColors(colors);
 
   const colorPoints = document.getElementById("color-points");
-  const existingPoints = Array.from(colorPoints.querySelectorAll(".control-point"));
+  const existingPoints = Array.from(
+    colorPoints.querySelectorAll(".control-point")
+  );
   const existingCount = existingPoints.length;
   const newCount = colors.length;
 
@@ -1117,7 +1119,7 @@ function applySelectedPalette(paletteIndex) {
   const colorFieldset = document
     .getElementById("color-points")
     .closest("fieldset");
-  
+
   if (existingCount === newCount) {
     // Same number of colors - just update the color values, keep positions
     for (let i = 0; i < newCount; i++) {
@@ -1127,17 +1129,20 @@ function applySelectedPalette(paletteIndex) {
   } else {
     // Different number of colors - need to recalculate positions
     // But preserve existing positions as much as possible
-    const existingPositions = existingPoints.map(point => 
+    const existingPositions = existingPoints.map((point) =>
       parseInt(point.querySelector(".cp-index").value)
     );
-    
+
     // Clear existing points
     colorPoints.innerHTML = "";
-    
+
     if (newCount <= existingCount) {
       // Fewer colors than before - use first N existing positions
       for (let i = 0; i < newCount; i++) {
-        const position = i < existingPositions.length ? existingPositions[i] : Math.round((i / newCount) * 100);
+        const position =
+          i < existingPositions.length
+            ? existingPositions[i]
+            : Math.round((i / newCount) * 100);
         addControlPoint("color", colors[i]);
         colorPoints.lastChild.querySelector(".cp-index").value = position;
       }
@@ -1156,7 +1161,11 @@ function applySelectedPalette(paletteIndex) {
             const remainingSpace = 100 - usedSpace;
             const newColorIndex = i - existingPositions.length;
             const newColorsCount = newCount - existingPositions.length;
-            position = usedSpace + Math.round(((newColorIndex + 1) / (newColorsCount + 1)) * remainingSpace);
+            position =
+              usedSpace +
+              Math.round(
+                ((newColorIndex + 1) / (newColorsCount + 1)) * remainingSpace
+              );
           } else {
             // No existing positions, distribute evenly
             position = Math.round((i / newCount) * 100);
@@ -1244,33 +1253,54 @@ function exportSVG() {
   URL.revokeObjectURL(url);
 }
 
-// --- BEZIER CURVE FUNCTIONS ---
+// --- NEW BEZIER CURVE FUNCTIONS ---
 
-function calculateTangentVector(points, index, lookAhead = 2) {
-  // Calculate tangent by considering multiple points on each side
+function calculateTangentVector(points, index) {
   const point = points[index];
+  const numPoints = points.length;
+
+  // Analyze local geometry
+  const localAnalysis = analyzeLocalGeometry(points, index);
+  const { density, curvature, isSharpTurn } = localAnalysis;
+
+  // Adaptive lookahead based on local conditions
+  let lookAhead;
+  if (isSharpTurn) {
+    lookAhead = 1; // Minimal smoothing for sharp turns
+  } else if (density > 0.8) {
+    // High density (points close together)
+    lookAhead = 2;
+  } else {
+    lookAhead = 3; // Normal smoothing for sparse areas
+  }
+
   let tangentX = 0,
     tangentY = 0;
   let weightSum = 0;
 
-  // Look at points before and after, with decreasing weight for distant points
+  // Calculate weighted tangent with adaptive weighting
   for (let offset = 1; offset <= lookAhead; offset++) {
-    const weight = 1.0 / offset; // Closer points have more influence
+    // Stronger weighting for sharp turns, gentler for smooth curves
+    const baseWeight = isSharpTurn ? Math.pow(2, -offset) : 1.0 / offset;
 
     // Forward direction
-    if (index + offset < points.length) {
+    if (index + offset < numPoints) {
       const forwardPoint = points[index + offset];
-      tangentX += weight * (forwardPoint.x - point.x);
-      tangentY += weight * (forwardPoint.y - point.y);
-      weightSum += weight;
+      const dx = forwardPoint.x - point.x;
+      const dy = forwardPoint.y - point.y;
+      tangentX += baseWeight * dx;
+      tangentY += baseWeight * dy;
+      weightSum += baseWeight;
     }
 
     // Backward direction
     if (index - offset >= 0) {
       const backwardPoint = points[index - offset];
-      tangentX += weight * (point.x - backwardPoint.x);
-      tangentY += weight * (point.y - backwardPoint.y);
-      weightSum += weight;
+      const dx = point.x - backwardPoint.x;
+      const dy = point.y - backwardPoint.y;
+      tangentX += baseWeight * dx;
+      tangentY += baseWeight * dy;
+      weightSum += baseWeight;
     }
   }
 
@@ -1281,10 +1311,10 @@ function calculateTangentVector(points, index, lookAhead = 2) {
   }
 
   // Handle edge cases
-  if (index === 0 && points.length > 1) {
+  if (index === 0 && numPoints > 1) {
     tangentX = points[1].x - points[0].x;
     tangentY = points[1].y - points[0].y;
-  } else if (index === points.length - 1 && points.length > 1) {
+  } else if (index === numPoints - 1 && numPoints > 1) {
     tangentX = points[index].x - points[index - 1].x;
     tangentY = points[index].y - points[index - 1].y;
   }
@@ -1292,11 +1322,83 @@ function calculateTangentVector(points, index, lookAhead = 2) {
   return { x: tangentX, y: tangentY };
 }
 
-function calculateControlPoints(points, index, tangentStrength = 0.3) {
+function analyzeLocalGeometry(points, index) {
+  const numPoints = points.length;
+  if (numPoints < 3) return { density: 0, curvature: 0, isSharpTurn: false };
+
+  const point = points[index];
+  let totalDistance = 0;
+  let neighborCount = 0;
+  const maxRadius = 3; // Check up to 3 points away
+
+  // Calculate local point density
+  for (
+    let offset = 1;
+    offset <= maxRadius && (index + offset < numPoints || index - offset >= 0);
+    offset++
+  ) {
+    if (index + offset < numPoints) {
+      const forwardPoint = points[index + offset];
+      const dist = Math.sqrt(
+        Math.pow(forwardPoint.x - point.x, 2) +
+          Math.pow(forwardPoint.y - point.y, 2)
+      );
+      totalDistance += dist;
+      neighborCount++;
+    }
+    if (index - offset >= 0) {
+      const backwardPoint = points[index - offset];
+      const dist = Math.sqrt(
+        Math.pow(point.x - backwardPoint.x, 2) +
+          Math.pow(point.y - backwardPoint.y, 2)
+      );
+      totalDistance += dist;
+      neighborCount++;
+    }
+  }
+
+  const avgDistance = neighborCount > 0 ? totalDistance / neighborCount : 1;
+  const densityThreshold = 20; // Adjust based on your coordinate system
+  const density = Math.min(1, densityThreshold / avgDistance);
+
+  // Calculate curvature to detect sharp turns
+  let curvature = 0;
+  let isSharpTurn = false;
+
+  if (index > 0 && index < numPoints - 1) {
+    const prevPoint = points[index - 1];
+    const nextPoint = points[index + 1];
+
+    // Calculate vectors
+    const v1x = point.x - prevPoint.x;
+    const v1y = point.y - prevPoint.y;
+    const v2x = nextPoint.x - point.x;
+    const v2y = nextPoint.y - point.y;
+
+    // Calculate angle between vectors
+    const dot = v1x * v2x + v1y * v2y;
+    const mag1 = Math.sqrt(v1x * v1x + v1y * v1y);
+    const mag2 = Math.sqrt(v2x * v2x + v2y * v2y);
+
+    if (mag1 > 0 && mag2 > 0) {
+      const cosAngle = dot / (mag1 * mag2);
+      const angle = Math.acos(Math.max(-1, Math.min(1, cosAngle)));
+      curvature = angle;
+
+      // Sharp turn threshold (adjust as needed)
+      isSharpTurn = angle > Math.PI / 3; // 60 degrees
+    }
+  }
+
+  return { density, curvature, isSharpTurn };
+}
+
+function calculateControlPoints(points, index) {
   if (points.length < 2) return null;
 
   const point = points[index];
-  const tangent = calculateTangentVector(points, index, 3); // Look 3 points ahead/behind
+  const tangent = calculateAdaptiveTangentVector(points, index);
+  const localAnalysis = analyzeLocalGeometry(points, index);
 
   // Calculate control point distances based on neighboring point distances
   let prevDistance = 0;
@@ -1314,6 +1416,17 @@ function calculateControlPoints(points, index, tangentStrength = 0.3) {
     nextDistance = Math.sqrt(
       Math.pow(nextPoint.x - point.x, 2) + Math.pow(nextPoint.y - point.y, 2)
     );
+  }
+
+  // Adaptive tangent strength based on local conditions
+  let tangentStrength;
+  if (localAnalysis.isSharpTurn) {
+    tangentStrength = 0.15; // Tighter control for sharp turns
+  } else if (localAnalysis.density > 0.7) {
+    // High density areas (dampening): reduce strength proportionally
+    tangentStrength = 0.2 * (1 - localAnalysis.density * 0.3);
+  } else {
+    tangentStrength = 0.3; // Normal strength for smooth curves
   }
 
   // Use average distance if both exist, otherwise use the available one
@@ -1355,8 +1468,8 @@ function generateBezierPath(points) {
     const nextPoint = points[i + 1];
 
     // Calculate control points for current and next points
-    const currentControls = calculateControlPoints(points, i);
-    const nextControls = calculateControlPoints(points, i + 1);
+    const currentControls = calculateAdaptiveControlPoints(points, i);
+    const nextControls = calculateAdaptiveControlPoints(points, i + 1);
 
     if (currentControls && nextControls) {
       // Use the outgoing control point from current and incoming control point from next
@@ -1372,6 +1485,135 @@ function generateBezierPath(points) {
 
   return pathData;
 }
+
+// --- BEZIER CURVE FUNCTIONS ---
+
+// function calculateTangentVector(points, index, lookAhead = 2) {
+//   // Calculate tangent by considering multiple points on each side
+//   const point = points[index];
+//   let tangentX = 0,
+//     tangentY = 0;
+//   let weightSum = 0;
+
+//   // Look at points before and after, with decreasing weight for distant points
+//   for (let offset = 1; offset <= lookAhead; offset++) {
+//     const weight = 1.0 / offset; // Closer points have more influence
+
+//     // Forward direction
+//     if (index + offset < points.length) {
+//       const forwardPoint = points[index + offset];
+//       tangentX += weight * (forwardPoint.x - point.x);
+//       tangentY += weight * (forwardPoint.y - point.y);
+//       weightSum += weight;
+//     }
+
+//     // Backward direction
+//     if (index - offset >= 0) {
+//       const backwardPoint = points[index - offset];
+//       tangentX += weight * (point.x - backwardPoint.x);
+//       tangentY += weight * (point.y - backwardPoint.y);
+//       weightSum += weight;
+//     }
+//   }
+
+//   // Normalize the tangent
+//   if (weightSum > 0) {
+//     tangentX /= weightSum;
+//     tangentY /= weightSum;
+//   }
+
+//   // Handle edge cases
+//   if (index === 0 && points.length > 1) {
+//     tangentX = points[1].x - points[0].x;
+//     tangentY = points[1].y - points[0].y;
+//   } else if (index === points.length - 1 && points.length > 1) {
+//     tangentX = points[index].x - points[index - 1].x;
+//     tangentY = points[index].y - points[index - 1].y;
+//   }
+
+//   return { x: tangentX, y: tangentY };
+// }
+
+// function calculateControlPoints(points, index, tangentStrength = 0.3) {
+//   if (points.length < 2) return null;
+
+//   const point = points[index];
+//   const tangent = calculateTangentVector(points, index, 3); // Look 3 points ahead/behind
+
+//   // Calculate control point distances based on neighboring point distances
+//   let prevDistance = 0;
+//   let nextDistance = 0;
+
+//   if (index > 0) {
+//     const prevPoint = points[index - 1];
+//     prevDistance = Math.sqrt(
+//       Math.pow(point.x - prevPoint.x, 2) + Math.pow(point.y - prevPoint.y, 2)
+//     );
+//   }
+
+//   if (index < points.length - 1) {
+//     const nextPoint = points[index + 1];
+//     nextDistance = Math.sqrt(
+//       Math.pow(nextPoint.x - point.x, 2) + Math.pow(nextPoint.y - point.y, 2)
+//     );
+//   }
+
+//   // Use average distance if both exist, otherwise use the available one
+//   const baseDistance =
+//     (prevDistance + nextDistance) /
+//     (prevDistance > 0 && nextDistance > 0 ? 2 : 1);
+//   const controlDistance = baseDistance * tangentStrength;
+
+//   // Normalize tangent vector
+//   const tangentLength = Math.sqrt(
+//     tangent.x * tangent.x + tangent.y * tangent.y
+//   );
+//   if (tangentLength === 0) return null;
+
+//   const unitTangentX = tangent.x / tangentLength;
+//   const unitTangentY = tangent.y / tangentLength;
+
+//   // Create collinear control points on both sides of the point
+//   const controlPoint1 = {
+//     x: point.x - unitTangentX * controlDistance,
+//     y: point.y - unitTangentY * controlDistance,
+//   };
+
+//   const controlPoint2 = {
+//     x: point.x + unitTangentX * controlDistance,
+//     y: point.y + unitTangentY * controlDistance,
+//   };
+
+//   return { cp1: controlPoint1, cp2: controlPoint2 };
+// }
+
+// function generateBezierPath(points) {
+//   if (points.length < 2) return "";
+
+//   let pathData = `M ${points[0].x} ${points[0].y}`;
+
+//   for (let i = 0; i < points.length - 1; i++) {
+//     const currentPoint = points[i];
+//     const nextPoint = points[i + 1];
+
+//     // Calculate control points for current and next points
+//     const currentControls = calculateControlPoints(points, i);
+//     const nextControls = calculateControlPoints(points, i + 1);
+
+//     if (currentControls && nextControls) {
+//       // Use the outgoing control point from current and incoming control point from next
+//       const cp1 = currentControls.cp2; // Outgoing from current point
+//       const cp2 = nextControls.cp1; // Incoming to next point
+
+//       pathData += ` C ${cp1.x} ${cp1.y}, ${cp2.x} ${cp2.y}, ${nextPoint.x} ${nextPoint.y}`;
+//     } else {
+//       // Fallback to line if control points can't be calculated
+//       pathData += ` L ${nextPoint.x} ${nextPoint.y}`;
+//     }
+//   }
+
+//   return pathData;
+// }
 
 // Load default swatches from swatches.json
 async function loadDefaultSwatches() {
