@@ -46,8 +46,8 @@ function addPendulum() {
 
   row.innerHTML = `
           <td>P${id + 1}</td>
-          <td><input type="number" class="pendulum-frequency" value="1.0" step="0.1" min="0.1" onchange="generate()"></td>
-          <td><input type="number" class="pendulum-magnitude" value="100" step="1" min="1" onchange="generate()"></td>
+          <td><input type="number" class="pendulum-frequency" value="1.0" step="0.01" min="0.1" onchange="generate()"></td>
+          <td><input type="number" class="pendulum-magnitude" value="100" step="10" min="1" onchange="generate()"></td>
           <td><input type="number" class="pendulum-phase" value="0" step="1" min="0" max="360" onchange="generate()"></td>
           <td><input type="number" class="pendulum-dampening" value="0.0" step="0.01" min="0" max="1" onchange="generate()"></td>
           <td><input type="checkbox" class="pendulum-x-axis" checked onchange="generate()"></td>
@@ -1397,7 +1397,7 @@ function calculateControlPoints(points, index) {
   if (points.length < 2) return null;
 
   const point = points[index];
-  const tangent = calculateAdaptiveTangentVector(points, index);
+  const tangent = calculateTangentVector(points, index);
   const localAnalysis = analyzeLocalGeometry(points, index);
 
   // Calculate control point distances based on neighboring point distances
